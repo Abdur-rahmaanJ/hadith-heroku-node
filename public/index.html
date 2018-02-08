@@ -41,9 +41,9 @@ function loadJSON(path, success, error)
     xhr.open("GET", path, true);
     xhr.send();
 }
-
+var jdoc = require('bukhari.json');
 function loadHadithJSON(){
-    loadJSON('bukhari.json',
+    loadJSON(jdoc,
          function(data) {
             
             var ahadith = [];
