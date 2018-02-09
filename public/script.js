@@ -1,10 +1,12 @@
 $ = (queryString) => document.querySelector(queryString);
+
 var fs = require('fs');
 var objx;
-fs.readFile('file', 'utf8', function (err, data) {
-  if (err) throw err;
-  objx = JSON.parse(data);
-});
+
+ var contents = fs.readFileSync("bukhari.json");
+// Define to JSON type
+ var objx = JSON.parse(contents);
+alert(objx);
 
 function LOAD() {
 
